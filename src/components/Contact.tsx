@@ -1,43 +1,7 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, MapPin, CheckCircle2, Loader2 } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Mail, Phone } from 'lucide-react';
 
 export default function Contact() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-    
-    try {
-      const response = await fetch('/api/notify', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-      } else {
-        console.error('Submission failed');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-32 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -118,85 +82,13 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 bg-white/[0.02] backdrop-blur-3xl p-8 md:p-16 border border-white/5 shadow-2xl relative"
           >
-            <AnimatePresence mode="wait">
-              {!isSubmitted ? (
-                <motion.form 
-                  key="contact-form"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="space-y-10" 
-                  onSubmit={handleSubmit}
-                >
-                  <div className="grid md:grid-cols-2 gap-10">
-                    <div className="space-y-2 group">
-                      <label htmlFor="name" className="text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-colors">Name</label>
-                      <Input id="name" name="name" required placeholder="Your Name" className="rounded-none border-0 border-b border-white/10 bg-transparent px-0 text-white placeholder:text-white/10 focus:border-white transition-all py-4 h-auto text-lg font-heading tracking-wide" />
-                    </div>
-                    <div className="space-y-2 group">
-                      <label htmlFor="phone" className="text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-colors">Phone</label>
-                      <Input id="phone" name="phone" required placeholder="(941) 915-1061" className="rounded-none border-0 border-b border-white/10 bg-transparent px-0 text-white placeholder:text-white/10 focus:border-white transition-all py-4 h-auto text-lg font-heading tracking-wide" />
-                    </div>
-                  </div>
-                  <div className="space-y-2 group">
-                    <label htmlFor="email" className="text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-colors">Email Address</label>
-                    <Input id="email" name="email" required type="email" placeholder="email@example.com" className="rounded-none border-0 border-b border-white/10 bg-transparent px-0 text-white placeholder:text-white/10 focus:border-white transition-all py-4 h-auto text-lg font-heading tracking-wide" />
-                  </div>
-                  <div className="space-y-2 group">
-                    <label htmlFor="message" className="text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-colors">Project Details</label>
-                    <Textarea 
-                      id="message"
-                      name="message"
-                      required
-                      placeholder="Describe your vision..." 
-                      className="min-h-[120px] rounded-none border-0 border-b border-white/10 bg-transparent px-0 text-white placeholder:text-white/10 focus:border-white transition-all p-0 py-4 h-auto text-lg font-heading tracking-wide resize-none" 
-                    />
-                  </div>
-                  <Button 
-                    disabled={isSubmitting}
-                    className="w-full bg-white hover:bg-white/90 text-black py-8 text-sm font-black uppercase tracking-[0.3em] rounded-none transition-all active:scale-[0.98] shadow-xl"
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center gap-3">
-                        <Loader2 className="animate-spin" size={18} />
-                        PROCESSING
-                      </span>
-                    ) : (
-                      'GET MY FREE QUOTE'
-                    )}
-                  </Button>
-                  <p className="text-[10px] text-white/30 text-center uppercase tracking-widest">
-                    No-obligation estimates • Your information is secure
-                  </p>
-                </motion.form>
-              ) : (
-                <motion.div
-                  key="success-message"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-20 space-y-8"
-                >
-                  <div className="flex justify-center">
-                    <div className="w-20 h-20 border border-white/20 flex items-center justify-center text-white">
-                      <CheckCircle2 size={32} strokeWidth={1} />
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <h3 className="text-4xl font-heading font-light text-white uppercase tracking-tight italic">Quote Requested</h3>
-                    <p className="text-white font-sans font-light max-w-xs mx-auto text-base tracking-wide leading-relaxed">
-                      Thank you. We’ve received your request and a specialist will contact you <span className="font-bold text-[#3B82F6]">within 24 hours</span> to schedule your estimate.
-                    </p>
-                  </div>
-                  <Button 
-                    onClick={() => setIsSubmitted(false)}
-                    variant="ghost"
-                    className="text-white hover:text-white hover:bg-transparent text-[10px] font-bold uppercase tracking-[0.4em]"
-                  >
-                    SEND ANOTHER MESSAGE
-                  </Button>
-                </motion.div>
-              )}
-            </AnimatePresence>
+           <div className="w-full h-[700px] rounded-lg overflow-hidden bg-transparent">
+  <iframe
+    src="https://api.leadconnectorhq.com/widget/form/MY25NQ01iLnoEYDe0zFj"
+    style={{ width: "100%", height: "100%", border: "none", borderRadius: "8px" }}
+    title="Triple Diamond Glass Submission Form"
+  />
+</div>
           </motion.div>
         </div>
 
