@@ -21,7 +21,7 @@ export default function Contact() {
               Fast Response • Precise Craftsmanship • Venice & Sarasota's Local Glass Experts. Reach out today to start your project.
             </p>
 
-            <motion.div 
+            <motion.div
               variants={{
                 hidden: { opacity: 0 },
                 visible: {
@@ -43,10 +43,10 @@ export default function Contact() {
                 { label: 'Serving Southwest Florida', color: '#EF4444' }
               ].map((item, idx) => (
                 <motion.div key={idx} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }} className="flex items-center gap-4">
-                   <div className="w-6 h-6 border border-white/20 flex items-center justify-center rounded-full">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-                   </div>
-                   <span className="text-lg font-heading text-white/90 tracking-wide">{item.label}</span>
+                  <div className="w-6 h-6 border border-white/20 flex items-center justify-center rounded-full">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
+                  </div>
+                  <span className="text-lg font-heading text-white/90 tracking-wide">{item.label}</span>
                 </motion.div>
               ))}
 
@@ -67,7 +67,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading italic text-sm text-white tracking-widest mb-1">Email Inquiry</h4>
-                    <p className="text-xl font-heading text-white tracking-wider">info@triplediamondglass.com</p>
+                    <p className="text-xl font-heading text-white tracking-wider">info@triplediamondglassproducts.com</p>
                   </div>
                 </motion.div>
               </div>
@@ -82,13 +82,13 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 bg-white/[0.02] backdrop-blur-3xl p-8 md:p-16 border border-white/5 shadow-2xl relative"
           >
-           <div className="w-full h-[700px] rounded-lg overflow-hidden bg-transparent">
-  <iframe
-    src="https://api.leadconnectorhq.com/widget/form/MY25NQ01iLnoEYDe0zFj"
-    style={{ width: "100%", height: "100%", border: "none", borderRadius: "8px" }}
-    title="Triple Diamond Glass Submission Form"
-  />
-</div>
+            <div className="w-full h-[700px] rounded-lg overflow-hidden bg-transparent">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/MY25NQ01iLnoEYDe0zFj"
+                style={{ width: "100%", height: "100%", border: "none", borderRadius: "8px" }}
+                title="Triple Diamond Glass West Coast Contact Form"
+              />
+            </div>
           </motion.div>
         </div>
 
@@ -108,7 +108,7 @@ export default function Contact() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Triple Diamond Glass Location"
+            title="Triple Diamond Glass West Coast Location - Venice FL"
             className="opacity-60 hover:opacity-100 transition-opacity duration-1000"
           ></iframe>
           <div className="absolute inset-0 pointer-events-none border-[20px] border-[#020617]/50" />
