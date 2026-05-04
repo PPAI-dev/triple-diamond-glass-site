@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://triplediamondglass.com/sitemap.xml
+Sitemap: https://www.triplediamondglassproducts.com/sitemap.xml
