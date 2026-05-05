@@ -1,15 +1,13 @@
 {
-  "redirects": [
+  "headers": [
     {
       "source": "/(.*)",
-      "has": [
+      "headers": [
         {
-          "type": "host",
-          "value": "triplediamondglassproducts.com"
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
         }
-      ],
-      "destination": "https://www.triplediamondglassproducts.com/$1",
-      "permanent": true
+      ]
     }
   ],
   "rewrites": [
