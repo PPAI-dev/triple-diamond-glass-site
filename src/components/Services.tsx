@@ -1,4 +1,4 @@
-import { Home, Building2, Diamond, Maximize } from 'lucide-react';
+import { Home, Building2, Diamond, Maximize, Shield, DoorOpen, Wind } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function Services() {
@@ -23,9 +23,27 @@ export default function Services() {
     },
     {
       title: 'Custom Glass & Mirrors',
-      description: 'Bespoke mirrors and precision-cut glass features tailored for Venice’s finest interiors. Elevate your home with master-crafted glass designs built to your exact specifications.',
+      description: 'Bespoke mirrors and precision-cut glass features tailored for Venice\'s finest interiors. Elevate your home with master-crafted glass designs built to your exact specifications.',
       icon: Maximize,
       image: '/Outdoor Home Project.JPG',
+    },
+    {
+      title: 'Impact Windows',
+      description: 'PGT WinGuard impact windows in vinyl and aluminum — engineered for Florida\'s harshest storms. As a PGT Platinum Dealer, we supply and install the highest-rated impact windows available.',
+      icon: Shield,
+      image: '/Outdoot Project on a white home.JPG',
+    },
+    {
+      title: 'Impact Doors',
+      description: 'PGT impact-rated entry and sliding doors in vinyl and aluminum. Hurricane-tested, energy-efficient, and built to protect your Venice or Sarasota home year-round.',
+      icon: DoorOpen,
+      image: '/Outdoor window job.JPG',
+    },
+    {
+      title: 'Eze-Breeze Enclosures',
+      description: 'PGT Eze-Breeze porch and lanai enclosures custom-made for Southwest Florida outdoor living. Convert your outdoor space into a year-round retreat with panels engineered for coastal conditions.',
+      icon: Wind,
+      image: '/Completed yellow Project.JPG',
     },
   ];
 
