@@ -18,7 +18,7 @@ export default function ServiceDetails() {
     <section id="residential" className="py-24 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12">
-          
+
           {/* Main Content Area (Left) */}
           <div className="lg:col-span-8">
             <motion.div
@@ -35,7 +35,7 @@ export default function ServiceDetails() {
                 }
               }}
             >
-              <motion.span 
+              <motion.span
                 variants={{
                   hidden: { opacity: 0, x: -20 },
                   visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
@@ -44,7 +44,7 @@ export default function ServiceDetails() {
               >
                 Triple Diamond Glass
               </motion.span>
-              <motion.h2 
+              <motion.h2
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
@@ -53,15 +53,16 @@ export default function ServiceDetails() {
               >
                 <span className="italic">Residential & Commercial</span>
               </motion.h2>
-              <motion.div 
+              <motion.div
                 variants={{
                   hidden: { scaleX: 0 },
                   visible: { scaleX: 1, transition: { duration: 1, ease: "easeOut" } }
                 }}
-                className="w-full h-px bg-white/10 mb-12 origin-left" 
+                className="w-full h-px bg-white/10 mb-12 origin-left"
               />
-              
+
               <div className="space-y-12 text-white font-serif leading-relaxed text-xl max-w-3xl">
+
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, y: 20 },
@@ -90,6 +91,39 @@ export default function ServiceDetails() {
                     Contact us today for a free quote on your project.
                   </p>
                 </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.4 } }
+                  }}
+                  className="space-y-4 border-t border-white/10 pt-8"
+                >
+                  <h3 className="text-3xl font-heading font-light uppercase tracking-tight text-white">PGT Impact Windows & Doors</h3>
+                  <p className="text-lg opacity-90">
+                    As a certified <span className="font-bold italic text-white">PGT Platinum Dealer</span>, Triple Diamond Glass West Coast supplies and installs the full line of PGT WinGuard impact windows and doors — available in vinyl and aluminum. Engineered to Florida building code, energy-star rated, and backed by one of the strongest warranties in the industry.
+                  </p>
+                  <p className="text-lg opacity-90">
+                    Whether you need a single impact window replacement or a whole-home installation across Venice, Sarasota, North Port, or Englewood — we handle supply, permitting coordination, and installation under one roof.
+                  </p>
+                  <p className="text-sm font-sans uppercase tracking-[0.2em] text-[#3B82F6] font-bold">
+                    PGT Platinum Dealer — Venice, FL
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.6 } }
+                  }}
+                  className="space-y-4 border-t border-white/10 pt-8"
+                >
+                  <h3 className="text-3xl font-heading font-light uppercase tracking-tight text-white">Eze-Breeze Enclosures</h3>
+                  <p className="text-lg opacity-90">
+                    Transform your lanai, porch, or outdoor space with <span className="font-bold italic text-white">PGT Eze-Breeze enclosures</span> — custom-made for Southwest Florida living. Choose from porch enclosures, cabana doors, or garage door enclosures, all built to order and installed by our certified team.
+                  </p>
+                </motion.div>
+
               </div>
 
               <motion.div
@@ -134,7 +168,7 @@ export default function ServiceDetails() {
                   </a>
                 </div>
                 <div className="text-[11px] text-white font-medium leading-tight">
-                  126 Corporation Way suite b <br />
+                  126 Corporation Way Suite B <br />
                   Venice, FL 34285
                 </div>
               </div>
@@ -157,10 +191,27 @@ export default function ServiceDetails() {
                 </div>
               </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+              className="bg-white/5 backdrop-blur-md p-8 border border-white/10 text-center space-y-6"
+            >
+              <div className="bg-white/10 p-8 shadow-sm border border-white/10">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white block mb-4">Service Area</span>
+                <p className="text-xs text-white font-medium leading-relaxed">
+                  Venice · Sarasota · North Port · Englewood
+                </p>
+              </div>
+            </motion.div>
           </div>
 
         </div>
       </div>
     </section>
+  );
+}
   );
 }
