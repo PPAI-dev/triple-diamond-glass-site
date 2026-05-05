@@ -19,7 +19,6 @@ export default function ServiceDetails() {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12">
 
-          {/* Main Content Area (Left) */}
           <div className="lg:col-span-8">
             <motion.div
               initial="hidden"
@@ -27,12 +26,7 @@ export default function ServiceDetails() {
               viewport={{ once: true, margin: "-100px" }}
               variants={{
                 hidden: { opacity: 0 },
-                visible: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.2,
-                  }
-                }
+                visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
               }}
             >
               <motion.span
@@ -44,6 +38,7 @@ export default function ServiceDetails() {
               >
                 Triple Diamond Glass
               </motion.span>
+
               <motion.h2
                 variants={{
                   hidden: { opacity: 0, y: 30 },
@@ -53,6 +48,7 @@ export default function ServiceDetails() {
               >
                 <span className="italic">Residential & Commercial</span>
               </motion.h2>
+
               <motion.div
                 variants={{
                   hidden: { scaleX: 0 },
@@ -138,17 +134,18 @@ export default function ServiceDetails() {
                   </Button>
                 </a>
               </motion.div>
+
             </motion.div>
           </div>
 
-          {/* Sidebar Area (Right) */}
           <div className="lg:col-span-4 space-y-8">
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-              className="bg-white/5 backdrop-blur-md p-8 border border-white/10 relative group"
+              className="bg-white/5 backdrop-blur-md p-8 border border-white/10"
             >
               <div className="bg-white/10 p-8 shadow-sm border border-white/10 text-center space-y-6">
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white block">Triple Diamond</span>
@@ -206,12 +203,11 @@ export default function ServiceDetails() {
                 </p>
               </div>
             </motion.div>
+
           </div>
 
         </div>
       </div>
     </section>
-  );
-}
   );
 }
