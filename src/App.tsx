@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -13,7 +15,32 @@ import ScrollToTop from './components/ScrollToTop';
 import { SmoothScrollProvider } from './components/SmoothScroll';
 import { motion, useScroll, useSpring } from 'motion/react';
 
-export default function App() {
+const sectionMap: Record<string, string> = {
+  '/services': 'services',
+  '/gallery': 'gallery',
+  '/about': 'about',
+  '/contact': 'contact',
+};
+
+function ScrollHandler() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const sectionId = sectionMap[location.pathname];
+    if (sectionId) {
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location.pathname]);
+
+  return null;
+}
+
+function MainLayout() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -31,19 +58,29 @@ export default function App() {
         <div className="light-sweep" />
         <CursorEffect />
         <ScrollToTop />
+        <ScrollHandler />
         <Header />
         <main className="flex-grow">
           <Hero />
-          <Services />
-          <ServiceDetails />
+          <section id="services"><Services /><ServiceDetails /></section>
           <Brands />
-          <About />
-          <Gallery />
+          <section id="about"><About /></section>
+          <section id="gallery"><Gallery /></section>
           <CTA />
-          <Contact />
+          <section id="contact"><Contact /></section>
         </main>
         <Footer />
       </div>
     </SmoothScrollProvider>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<MainLayout />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
