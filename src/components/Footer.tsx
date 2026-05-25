@@ -1,6 +1,5 @@
 import { Linkedin, Facebook } from 'lucide-react';
 import { motion } from 'motion/react';
-
 export default function Footer() {
   return (
     <footer className="bg-[#0F172A] text-white py-20 border-t border-white/5">
@@ -52,7 +51,7 @@ export default function Footer() {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/p/Triple-Diamond-Glass-Products-LLC-61562558472287/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Visit Triple Diamond Glass on Facebook"
@@ -62,13 +61,11 @@ export default function Footer() {
               </a>
             </div>
           </motion.div>
-
           <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="flex justify-center gap-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white">
             <a href="#" className="hover:text-white transition-colors">Privacy</a>
             <a href="#" className="hover:text-white transition-colors">Terms</a>
             <a href="#" className="hover:text-white transition-colors">Sitemap</a>
           </motion.div>
-
           <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="flex flex-col items-center md:items-end gap-2">
             <div className="text-sm text-white font-sans font-light">
               © {new Date().getFullYear()} Triple Diamond Glass Products, LLC
