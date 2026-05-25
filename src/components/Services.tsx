@@ -13,7 +13,7 @@ export default function Services() {
       title: 'Shower Glass Installation',
       description: 'Elite frameless shower glass installation for luxury Sarasota and Venice bathrooms. Transform your space with high-end, custom-fitted glass designed for lasting elegance.',
       icon: Building2,
-      image: '/Outdoor window job.JPG',
+      image: '/Interior 1st and 2nd floor.JPG',
     },
     {
       title: 'Storefront & Commercial Glass',
@@ -31,19 +31,19 @@ export default function Services() {
       title: 'Impact Windows',
       description: 'PGT WinGuard impact windows in vinyl and aluminum — engineered for Florida\'s harshest storms. As a PGT Platinum Dealer, we supply and install the highest-rated impact windows available.',
       icon: Shield,
-      image: '/Outdoot Project on a white home.JPG',
+      image: '/Finished PGT window.JPG',
     },
     {
       title: 'Impact Doors',
       description: 'PGT impact-rated entry and sliding doors in vinyl and aluminum. Hurricane-tested, energy-efficient, and built to protect your Venice or Sarasota home year-round.',
       icon: DoorOpen,
-      image: '/Outdoor window job.JPG',
+      image: '/Finished PGT window again!.JPG',
     },
     {
       title: 'Eze-Breeze Enclosures',
       description: 'PGT Eze-Breeze porch and lanai enclosures custom-made for Southwest Florida outdoor living. Convert your outdoor space into a year-round retreat with panels engineered for coastal conditions.',
       icon: Wind,
-      image: '/Completed yellow Project.JPG',
+      image: '/Outdoor window job.JPG',
     },
   ];
 
@@ -64,16 +64,8 @@ export default function Services() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ 
-                duration: 1, 
-                delay: index * 0.1,
-                ease: [0.215, 0.61, 0.355, 1]
-              }}
-              whileHover={{ 
-                scale: 1.02,
-                rotateY: index % 2 === 0 ? 5 : -5,
-                transition: { duration: 0.5 }
-              }}
+              transition={{ duration: 1, delay: index * 0.1, ease: [0.215, 0.61, 0.355, 1] }}
+              whileHover={{ scale: 1.02, rotateY: index % 2 === 0 ? 5 : -5, transition: { duration: 0.5 } }}
               className="group relative aspect-[3/4] md:aspect-square lg:aspect-[4/3] overflow-hidden glass perspective-1000"
             >
               <motion.img
@@ -89,7 +81,7 @@ export default function Services() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, rotate: 0 }}
                   whileInView={{ opacity: 1, rotate: 45 }}
                   transition={{ delay: (index * 0.1) + 0.5, duration: 0.8 }}
@@ -98,9 +90,7 @@ export default function Services() {
                   <service.icon size={20} className="text-white group-hover:text-black -rotate-45 transition-colors duration-500" />
                 </motion.div>
                 <h3 className="text-3xl font-heading font-light mb-4 uppercase tracking-tight italic drop-shadow-md">{service.title}</h3>
-                <p className="text-white/70 font-sans font-light leading-relaxed mb-6 text-sm max-w-xs drop-shadow-sm">
-                  {service.description}
-                </p>
+                <p className="text-white/70 font-sans font-light leading-relaxed mb-6 text-sm max-w-xs drop-shadow-sm">{service.description}</p>
                 <div className="w-10 h-[1px] bg-white/40 transition-all duration-700 group-hover:w-full group-hover:bg-[#1E3A8A]" />
               </div>
             </motion.div>
