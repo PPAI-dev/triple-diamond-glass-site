@@ -51,9 +51,7 @@ export default function Footer() {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="https://www.facebook.com/people/Triple-Diamond-Glass-Products-LLC/61562558472287/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                href="https://www.facebook.com/people/Triple-Diamond-Glass-Products-LLC/61562558472287/"
                 aria-label="Visit Triple Diamond Glass on Facebook"
                 className="w-10 h-10 border border-white/10 flex items-center justify-center text-white hover:bg-white/5 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
               >
