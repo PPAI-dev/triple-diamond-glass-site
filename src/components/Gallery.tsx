@@ -14,7 +14,6 @@ export default function Gallery() {
     { url: '/Finished PGT window.JPG', title: 'PGT Impact Window Installation Venice FL' },
     { url: '/Finished PGT window again!.JPG', title: 'PGT WinGuard Impact Window Sarasota' },
     { url: '/Work in Progress water front home window 2nd floor.JPG', title: 'Waterfront Home Window Installation' },
-    { url: '/another finished windoe.JPG', title: 'Custom Window Installation Southwest Florida' },
   ];
 
   const handleNext = (e?: React.MouseEvent) => {
