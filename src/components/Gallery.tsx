@@ -6,40 +6,25 @@ export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const images = [
-    {
-      url: '/Interior 1st and 2nd floor.JPG',
-      title: 'Luxury Custom Glass Installation Venice FL',
-    },
-    {
-      url: '/Outdoot Project on a white home.JPG',
-      title: 'Exterior Residential Glass Solutions',
-    },
-    {
-      url: '/Outdoor Home Project.JPG',
-      title: 'Custom Architectural Glass Railings',
-    },
-    {
-      url: '/Completed yellow Project.JPG',
-      title: 'Premium Balcony Glass Enclosure Sarasota',
-    },
-    {
-      url: '/Outdoor window job.JPG',
-      title: 'Storefront Glass Repair & Installation',
-    },
+    { url: '/Interior 1st and 2nd floor.JPG', title: 'Luxury Custom Glass Installation Venice FL' },
+    { url: '/Outdoot Project on a white home.JPG', title: 'Exterior Residential Glass Solutions' },
+    { url: '/Outdoor Home Project.JPG', title: 'Custom Architectural Glass Railings' },
+    { url: '/Completed yellow Project.JPG', title: 'Premium Balcony Glass Enclosure Sarasota' },
+    { url: '/Outdoor window job.JPG', title: 'Storefront Glass Repair & Installation' },
+    { url: '/Finished PGT window.JPG', title: 'PGT Impact Window Installation Venice FL' },
+    { url: '/Finished PGT window again!.JPG', title: 'PGT WinGuard Impact Window Sarasota' },
+    { url: '/Work in Progress water front home window 2nd floor.JPG', title: 'Waterfront Home Window Installation' },
+    { url: '/another finished windoe.JPG', title: 'Custom Window Installation Southwest Florida' },
   ];
 
   const handleNext = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex + 1) % images.length);
-    }
+    if (selectedIndex !== null) setSelectedIndex((selectedIndex + 1) % images.length);
   };
 
   const handlePrev = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
-    }
+    if (selectedIndex !== null) setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
   };
 
   return (
@@ -64,16 +49,8 @@ export default function Gallery() {
               initial={{ opacity: 0, scale: 0.8, y: 50, rotateX: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
-                duration: 1, 
-                delay: (index % 3) * 0.15,
-                ease: [0.215, 0.61, 0.355, 1]
-              }}
-              whileHover={{ 
-                y: -15,
-                scale: 1.02,
-                transition: { duration: 0.5 }
-              }}
+              transition={{ duration: 1, delay: (index % 3) * 0.15, ease: [0.215, 0.61, 0.355, 1] }}
+              whileHover={{ y: -15, scale: 1.02, transition: { duration: 0.5 } }}
               onClick={() => setSelectedIndex(index)}
               className="relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-xl hover:shadow-[0_30px_60px_-15px_rgba(2,6,23,0.6)] transition-all duration-700 perspective-1000"
             >
@@ -97,7 +74,6 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
       <AnimatePresence>
         {selectedIndex !== null && (
           <motion.div
@@ -115,21 +91,12 @@ export default function Gallery() {
             >
               <X size={40} />
             </motion.button>
-
-            <button
-              className="absolute left-4 md:left-8 text-white/50 hover:text-white transition-colors z-[110] p-2"
-              onClick={handlePrev}
-            >
+            <button className="absolute left-4 md:left-8 text-white/50 hover:text-white transition-colors z-[110] p-2" onClick={handlePrev}>
               <ChevronLeft size={48} />
             </button>
-
-            <button
-              className="absolute right-4 md:right-8 text-white/50 hover:text-white transition-colors z-[110] p-2"
-              onClick={handleNext}
-            >
+            <button className="absolute right-4 md:right-8 text-white/50 hover:text-white transition-colors z-[110] p-2" onClick={handleNext}>
               <ChevronRight size={48} />
             </button>
-
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -148,9 +115,7 @@ export default function Gallery() {
                 <h3 className="text-white font-heading font-black text-2xl md:text-4xl uppercase tracking-[0.2em]">
                   {images[selectedIndex].title}
                 </h3>
-                <p className="text-white/50 mt-2 font-sans">
-                  {selectedIndex + 1} / {images.length}
-                </p>
+                <p className="text-white/50 mt-2 font-sans">{selectedIndex + 1} / {images.length}</p>
               </div>
             </motion.div>
           </motion.div>
@@ -159,4 +124,3 @@ export default function Gallery() {
     </section>
   );
 }
-
