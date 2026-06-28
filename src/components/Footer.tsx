@@ -37,7 +37,7 @@ export default function Footer() {
               <p>126 Corporation Way suite b</p>
               <p>Venice, FL 34285</p>
               <p className="mt-2 text-sm text-[#1E3A8A]">
-                <a href="tel:9419151061" className="hover:underline">(941) 915-1061</a>
+                <a href="tel:3305091506" className="hover:underline">(330) 509-1506</a>
               </p>
             </address>
             <div className="flex items-center gap-4">
