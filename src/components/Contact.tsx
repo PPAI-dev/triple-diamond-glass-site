@@ -57,7 +57,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading italic text-sm text-white tracking-widest mb-1">Direct Line</h4>
-                    <p className="text-xl font-heading text-white tracking-wider">(941) 915-1061</p>
+                    <p className="text-xl font-heading text-white tracking-wider">(330) 509-1506</p>
                   </div>
                 </motion.div>
 
