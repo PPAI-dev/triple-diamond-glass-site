@@ -58,7 +58,7 @@ export default function About() {
               }}
               className="text-xl text-white mb-8 font-serif leading-relaxed"
             >
-              Based in Venice, Florida, Triple Diamond Glass Products, LLC is the premier choice for <span className="text-[#1E3A8A] font-bold">Residential & Commercial Glass Services</span>. For over 15 years, we have provided top-tier glass repair Venice FL solutions to homeowners and elite businesses throughout the Gulf Coast.
+              Based in Venice, Florida, Triple Diamond Glass Products, LLC is the premier choice for <span className="text-[#1E3A8A] font-bold">Residential & Commercial Glass Services</span>. For over 30 years, we have provided top-tier glass repair Venice FL solutions to homeowners and elite businesses throughout the Gulf Coast.
             </motion.p>
             <motion.p 
               variants={{
@@ -83,7 +83,7 @@ export default function About() {
                   transition={{ duration: 1, delay: 0.5 }}
                   className="text-5xl font-black text-white mb-2 tracking-tighter"
                 >
-                  15+
+                  30+
                 </motion.div>
                 <div className="text-[10px] text-white font-black uppercase tracking-[0.3em]">Years Experience</div>
               </div>
