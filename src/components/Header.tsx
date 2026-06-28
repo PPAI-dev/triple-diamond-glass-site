@@ -105,9 +105,9 @@ export default function Header() {
                 <Facebook size={18} />
               </a>
             </div>
-            <a href="tel:9419151061" className="text-white font-sans font-medium text-xl tracking-wide group flex items-center gap-2">
+            <a href="tel:3305091506" className="text-white font-sans font-medium text-xl tracking-wide group flex items-center gap-2">
               <Phone size={16} className="group-hover:rotate-12 transition-transform" />
-              (941) 915-1061
+              (330) 509-1506
             </a>
           </div>
 
@@ -159,8 +159,8 @@ export default function Header() {
                 </a>
               ))}
               <div className="flex items-center gap-6 pt-4 border-t border-white/10">
-                <a href="tel:9419151061" className="text-white font-bold text-xl">
-                  (941) 915-1061
+                <a href="tel:3305091506" className="text-white font-bold text-xl">
+                  (330) 509-1506
                 </a>
                 <div className="flex items-center gap-4 text-white">
                   <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
