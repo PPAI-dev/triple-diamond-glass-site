@@ -160,8 +160,8 @@ export default function ServiceDetails() {
                   </Button>
                 </a>
                 <div className="pt-4">
-                  <a href="tel:9419151061" className="text-2xl font-bold text-white tracking-wide">
-                    (941) 915-1061
+                  <a href="tel:3305091506" className="text-2xl font-bold text-white tracking-wide">
+                    (330) 509-1506
                   </a>
                 </div>
                 <div className="text-[11px] text-white font-medium leading-tight">
